@@ -71,11 +71,6 @@ const Table = ({isPracticing}) => {
         c4: d[3],
       }})
 
-  const onCellClick = (event, value) => {
-    console.log(value, typeof value)
-    event.target.appendChild(value)
-  }
-
   const data = isPracticing ? getPracticeSet() : fullTable;
   const tableInstance = useTable({ columns, data });
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
