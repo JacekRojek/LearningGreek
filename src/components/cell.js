@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React, { useState } from "react";
 
 const Cell = ({text, defaultVisibleIndex, index, props}) => {
