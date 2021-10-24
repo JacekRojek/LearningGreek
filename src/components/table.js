@@ -1,13 +1,14 @@
 import _ from "lodash";
 import React from "react";
 import { useTable } from "react-table";
+import Cell from "./cell";
 
 const DATA = [
-  ["Α", "α", "alpha", "ā", "ǎ"],
+  ["Α", "α", "alpha", "ā, ǎ"],
   ["Β", "β", "beta", "b"],
   ["Γ", "γ", "gamma", "g"],
   ["Δ", "δ", "delta", "d"],
-  ["Ε", "ε", "epsilon", "ēě"],
+  ["Ε", "ε", "epsilon", "ē, ě"],
   ["Ζ", "ζ", "zeta", "dz"],
   ["Η", "η", "eta", "ē"],
   ["Θ", "θ", "theta", "th"],
@@ -63,14 +64,17 @@ const Table = ({isPracticing}) => {
     []
   );
   const getPracticeSet = () => _.shuffle(DATA).map((d) => {
-    const visibleRowIndex = _.random(0,3)
-    console.log(visibleRowIndex)
     return {
-        c1: visibleRowIndex === 0 ? d[0] : '',
-        c2: visibleRowIndex === 1 ? d[1] : '',
-        c3: visibleRowIndex === 2 ? d[2] : '',
-        c4: visibleRowIndex === 3 ? d[3] : '',
+        c1: d[0],
+        c2: d[1],
+        c3: d[2],
+        c4: d[3],
       }})
+
+  const onCellClick = (event, value) => {
+    console.log(value, typeof value)
+    event.target.appendChild(value)
+  }
 
   const data = isPracticing ? getPracticeSet() : fullTable;
   const tableInstance = useTable({ columns, data });
@@ -92,8 +96,17 @@ const Table = ({isPracticing}) => {
           prepareRow(row);
           return (
             <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
-                return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+              {row.cells.map((cell, i) => {
+                const visibleRowIndex = _.random(0,3)
+                const text = cell.render("Cell")
+                return (
+                  <Cell
+                    text={text}
+                    defaultVisibleIndex={visibleRowIndex}
+                    index={i}
+                    props={cell.getCellProps()}
+                  />
+                );
               })}
             </tr>
           );
