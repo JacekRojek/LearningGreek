@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const Cell = ({text, defaultVisibleIndex, index, props}) => {
-  const [isVisible, setIsVisible] = useState(defaultVisibleIndex === index);
+const Cell = ({text, visibleIndex, index, props, isPracticing}) => {
+  const [isVisible, setIsVisible] = useState(visibleIndex === index);
+  useEffect(() => {
+    setIsVisible(visibleIndex === index)
+  }, [visibleIndex, index])
   return (
     <td onClick={() => setIsVisible(true)} {...props}>
-      {isVisible ? text : ''}
+      {isVisible || !isPracticing ? text : ''}
     </td>
   );
 }

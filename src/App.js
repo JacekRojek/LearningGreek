@@ -11,7 +11,7 @@ function App() {
       <h1>Grrek Aplhabet</h1>
       <Table isPracticing={isPracticing}/>
       <Button onClick={() => setIsPracticing(!isPracticing)} type="primary">
-        {isPracticing ? 'Practice' : 'View Table'}
+        {isPracticing ? 'View Table' : 'Practice'}
       </Button>
     </div>
   );

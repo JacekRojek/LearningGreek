@@ -9,24 +9,24 @@ const DATA = [
   ["Γ", "γ", "gamma", "g"],
   ["Δ", "δ", "delta", "d"],
   ["Ε", "ε", "epsilon", "ē, ě"],
-  ["Ζ", "ζ", "zeta", "dz"],
+  ["Ζ", "ζ", "dzeta", "dz"],
   ["Η", "η", "eta", "ē"],
   ["Θ", "θ", "theta", "th"],
-  ["Ι", "ι", "iota", "ǐ, ī"],
+  ["Ι", "ι", "jota", "ǐ, ī"],
   ["Κ", "κ", "kappa", "k"],
   ["Λ", "λ", "lambda", "l"],
-  ["Μ", "μ", "mu", "m"],
-  ["Ν", "ν", "nu", "n"],
-  ["Ξ", "ξ", "xi", "k"],
+  ["Μ", "μ", "mi", "m"],
+  ["Ν", "ν", "ni", "n"],
+  ["Ξ", "ξ", "ksi", "k"],
   ["Ο", "ο", "omicron", "ǒ"],
   ["Π", "π", "pi", "p"],
   ["Ρ", "ρ", "rho", "r"],
-  ["Σ", "σ, ς", "s"],
+  ["Σ", "σ, ς", "sigma", "s"],
   ["Τ", "τ", "tau", "t"],
-  ["Υ", "υ", "upsilon", "y"],
-  ["Φ", "φ", "phi", "fi"],
-  ["Χ", "χ", "chi", "x"],
-  ["Ψ", "ψ", "psi", "f"],
+  ["Υ", "υ", "ypsilon", "ǔ, ū"],
+  ["Φ", "φ", "phi", "fi, ph"],
+  ["Χ", "χ", "chi", "ch"],
+  ["Ψ", "ψ", "psi", "ps"],
   ["Ω", "ω", "omega", "ō"],
 ];
 
@@ -88,16 +88,17 @@ const Table = ({isPracticing}) => {
       </thead>
       <tbody {...getTableBodyProps()}>
         {rows.map((row) => {
+          let visibleRowIndex = _.random(0,3)
           prepareRow(row);
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map((cell, i) => {
-                const visibleRowIndex = _.random(0,3)
                 const text = cell.render("Cell")
                 return (
                   <Cell
                     text={text}
-                    defaultVisibleIndex={visibleRowIndex}
+                    isPracticing={isPracticing}
+                    visibleIndex={visibleRowIndex}
                     index={i}
                     props={cell.getCellProps()}
                   />
