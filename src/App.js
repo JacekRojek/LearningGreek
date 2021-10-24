@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <h1>Grrek Aplhabet</h1>
       <Table isPracticing={isPracticing}/>
-      <Button onClick={() => setIsPracticing(!isPracticing)} type="primary">
+      <Button style={{marginBottom: '20px'}} onClick={() => setIsPracticing(!isPracticing)} type="primary">
         {isPracticing ? 'View Table' : 'Practice'}
       </Button>
     </div>
