@@ -1,18 +1,24 @@
-import './App.css';
-import Table from './components/table';
-import { Button } from 'antd';
-import { useState } from 'react';
-
+import { Route, Routes } from "react-router";
+import "./App.css";
+import Quotes from "./pages/Quotes";
+import Alphabet from "./pages/Alphabet";
+import { ROUTES } from "./config/navigation";
+import Nav from "./components/navigationBar";
+import Authors from "./pages/Authors";
+import Author from "./pages/Author";
 
 function App() {
-  const [isPracticing, setIsPracticing] = useState(false)
   return (
     <div className="App">
-      <h1>Grrek Aplhabet</h1>
-      <Table isPracticing={isPracticing}/>
-      <Button style={{marginBottom: '20px'}} onClick={() => setIsPracticing(!isPracticing)} type="primary">
-        {isPracticing ? 'View Table' : 'Practice'}
-      </Button>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Quotes />} />
+        <Route path={ROUTES.QUOTES} element={<Quotes />} />
+        <Route path={ROUTES.ALPHABET} element={<Alphabet />} />
+        <Route path={ROUTES.AUTHORS} element={<Authors />}>
+          <Route path=":name" element={<Author />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

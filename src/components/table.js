@@ -2,33 +2,9 @@ import _ from "lodash";
 import React from "react";
 import { useTable } from "react-table";
 import Cell from "./cell";
+import data from '../data/alphabet.json'
 
-const DATA = [
-  ["Α", "α", "alpha", "ā, ǎ"],
-  ["Β", "β", "beta", "b"],
-  ["Γ", "γ", "gamma", "g"],
-  ["Δ", "δ", "delta", "d"],
-  ["Ε", "ε", "epsilon", "ē, ě"],
-  ["Ζ", "ζ", "dzeta", "dz"],
-  ["Η", "η", "eta", "ē"],
-  ["Θ", "θ", "theta", "th"],
-  ["Ι", "ι", "jota", "ǐ, ī"],
-  ["Κ", "κ", "kappa", "k"],
-  ["Λ", "λ", "lambda", "l"],
-  ["Μ", "μ", "mi", "m"],
-  ["Ν", "ν", "ni", "n"],
-  ["Ξ", "ξ", "ksi", "k"],
-  ["Ο", "ο", "omicron", "ǒ"],
-  ["Π", "π", "pi", "p"],
-  ["Ρ", "ρ", "rho", "r"],
-  ["Σ", "σ, ς", "sigma", "s"],
-  ["Τ", "τ", "tau", "t"],
-  ["Υ", "υ", "ypsilon", "ǔ, ū"],
-  ["Φ", "φ", "phi", "fi, ph"],
-  ["Χ", "χ", "chi", "ch"],
-  ["Ψ", "ψ", "psi", "ps"],
-  ["Ω", "ω", "omega", "ō"],
-];
+const DATA = data
 
 const Table = ({isPracticing}) => {
   const fullTable = React.useMemo(
@@ -91,12 +67,13 @@ const Table = ({isPracticing}) => {
           let visibleRowIndex = _.random(0,3)
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()} key={row.id} >
               {row.cells.map((cell, i) => {
                 const text = cell.render("Cell")
                 return (
                   <Cell
                     text={text}
+                    key={i}
                     isPracticing={isPracticing}
                     visibleIndex={visibleRowIndex}
                     index={i}

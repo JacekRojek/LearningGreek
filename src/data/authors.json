@@ -1,0 +1,35 @@
+[
+  {
+      "name": "Eurypides",
+      "short": "(gr. Εὐριπίδης Euripídēs, ur. około 480 p.n.e., zm. 406 p.n.e.)",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Seated_Euripides_Louvre_Ma343.jpg/1280px-Seated_Euripides_Louvre_Ma343.jpg",
+      "bio": "Jeden z najwybitniejszych dramaturgów starożytnej Grecji. Urodzony na Salaminie syn ateńskiego ziemianina Mnesarchosa i Klejto. Odebrał staranne wykształcenie atletyczne, muzyczne (obejmowało ono poza muzyką umiejętności poetyckie i choreograficzne) oraz filozoficzne. Próbował również swoich sił w malarstwie. Wiadomo, że był kapłanem Zeusa we Flyi, brał także udział w poselstwie Aten do Syrakuz, pełnił obowiązki proksenosa obywateli Magnezji w Atenach. Eurypides ożenił się dwa razy. Jego pierwszą żoną była Melito, drugą natomiast Chojrine, z którą doczekał się trzech synów. Około 408 r. p.n.e. wyprowadził się z Aten, najpierw skierował się do Magnezji w Tesalii, później do Pelli, gdzie zmarł na dworze króla Macedonii Archelaosa I śmiercią tragiczną w 406 r. p.n.e. rozszarpany przez królewskie psy gończe.",
+      "texts": [
+        "Alkestis",
+        "Andromacha",
+        "Bachantki",
+        "Błagalnice",
+        "Cyklop",
+        "Elektra",
+        "Fenicjanki",
+        "Hekabe",
+        "Helena",
+        "Herakles szalejący",
+        "Heraklidzi",
+        "Hippolytos uwieńczony",
+        "Ifigenia w Taurydzie",
+        "Ifigenia w Aulidzie",
+        "Ion",
+        "Medea",
+        "Orestes",
+        "Trojanki"
+      ]
+  },
+  {
+    "name": "Menander",
+    "short": "(stgr. Μένανδρος Menandros, 342–291 p.n.e.)",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Menander_Chiaramonti_Inv1453.jpg/1280px-Menander_Chiaramonti_Inv1453.jpg",
+    "bio": "Starożytny poeta grecki, główny przedstawiciel komedii nowej i komedii charakterów. \nPochodził z rodziny, która zapewniła mu staranne wychowanie i wykształcenie. Był uczniem Teofrasta oraz przyjacielem Epikura, z którym najprawdopodobniej pełnił służbę wojskową. Duży wpływ na jego zainteresowanie teatrem miał znany komediopisarz Aleksis. Był admiratorem twórczości scenicznej Eurypidesa, który stanowił dla niego wzór i którego usiłował – oczywiście na swój sposób – naśladować. Uważa się, że Menander był podatny na wdzięki niewieście. Jego kochanką była prawdopodobnie hetera Glykera, kochanka Harpalosa. Menander zmarł tragicznie w Pireusie, w wieku 51 albo 52 lat, topiąc się podczas kąpieli. Jest autorem 108 komedii, zaginionych pod koniec starożytności, a w ostatnich stuleciach odnajdywanych wśród egipskich papirusów. Treść czterech z nich udało się współcześnie zrekonstruować.",
+    "texts": []
+}
+]

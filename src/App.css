@@ -1,4 +1,10 @@
 @import '~antd/dist/antd.css';
+
+
+body {
+  background-color: #B08968;
+}
+
 .App {
   text-align: center;
 }
